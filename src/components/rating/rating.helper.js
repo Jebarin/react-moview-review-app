@@ -18,7 +18,7 @@ export function saveReview(inputObj, _cbFun){
     //read existing ratings
     let ratings = storage.get('ratings') || [];
     const _index = getImdbIndex(ratings, inputObj.movieData.imdbID); 
-    if(_index !=="-1"){
+    if(_index !==-1){
         ratings.splice(_index,1);
     } 
     ratings.push({
